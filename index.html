@@ -74,24 +74,26 @@
       padding: 0 20px;
     }
 
-    /* HEADER & NAVEGACIÓN */
+    /* HEADER & NAVEGACIÓN MEJORADO */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(7, 19, 41, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(27, 99, 198, 0.2);
+      background: rgba(7, 19, 41, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       transition: var(--transition);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
 
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 80px;
+      height: 90px;
     }
 
     .logo {
@@ -99,29 +101,32 @@
       align-items: center;
       gap: 12px;
       font-weight: 900;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       letter-spacing: -0.5px;
       color: var(--white);
     }
 
-    .logo-img {
-      height: 40px;
-      width: auto;
-      object-fit: contain;
-      border-radius: 4px;
+    /* Reemplazo de logo roto por un ícono representativo */
+    .logo-icon-fallback {
+      font-size: 2rem;
+      color: var(--cyan-accent);
+      background: rgba(0, 210, 255, 0.1);
+      padding: 8px;
+      border-radius: 8px;
     }
 
     .logo-text span {
       color: var(--cyan-accent);
       display: block;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
     }
 
     .nav-menu {
       display: flex;
-      gap: 25px;
+      gap: 30px;
       list-style: none;
       align-items: center;
     }
@@ -129,10 +134,10 @@
     .nav-link {
       font-size: 0.95rem;
       font-weight: 600;
-      color: var(--text-main);
+      color: var(--text-muted);
       transition: var(--transition);
       position: relative;
-      padding: 5px 0;
+      padding: 8px 0;
     }
 
     .nav-link::after {
@@ -144,10 +149,11 @@
       height: 2px;
       background: var(--cyan-accent);
       transition: var(--transition);
+      border-radius: 2px;
     }
 
     .nav-link:hover {
-      color: var(--cyan-accent);
+      color: var(--white);
     }
 
     .nav-link:hover::after {
@@ -155,19 +161,21 @@
     }
 
     .btn-contact-header {
-      background: linear-gradient(135deg, var(--bright-blue), #0d47a1);
+      background: linear-gradient(135deg, #00d2ff, #1b63c6);
       color: var(--white);
-      padding: 10px 22px;
+      padding: 12px 26px;
       border-radius: 50px;
       font-weight: 700;
-      font-size: 0.9rem;
-      box-shadow: 0 4px 15px rgba(27, 99, 198, 0.4);
+      font-size: 0.95rem;
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
       transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .btn-contact-header:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+      box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
+      color: #fff;
     }
 
     .mobile-toggle {
@@ -188,7 +196,8 @@
       padding-bottom: 80px;
       display: flex;
       align-items: center;
-      background: linear-gradient(135deg, rgba(7, 19, 41, 0.92) 0%, rgba(11, 24, 46, 0.88) 100%), url('potooooooooo.jpg');
+      /* Imagen cambiada por Unsplash - Estructura Industrial */
+      background: linear-gradient(135deg, rgba(7, 19, 41, 0.92) 0%, rgba(11, 24, 46, 0.88) 100%), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -287,69 +296,79 @@
       background: rgba(0, 210, 255, 0.05);
     }
 
-    /* COTIZADOR EXPRESS CON BANNER HORIZONTAL PERFECTO */
+    /* COTIZADOR EXPRESS MEJORADO */
     .hero-card-quote {
-      background: rgba(14, 28, 54, 0.92);
-      border: 1px solid rgba(0, 210, 255, 0.25);
-      backdrop-filter: blur(20px);
-      padding: 30px;
+      background: rgba(10, 20, 40, 0.85);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      padding: 35px;
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
       text-align: center;
     }
 
+    /* Imagen cambiada por Unsplash - Detalle de Soldadura */
     .hero-logo-banner {
       width: 100%;
       height: 140px;
       object-fit: cover;
       object-position: center;
       border-radius: var(--radius-sm);
-      margin-bottom: 20px;
-      border: 1px solid rgba(0, 210, 255, 0.4);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+      margin-bottom: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
     }
 
     .hero-card-quote h3 {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       margin-bottom: 8px;
       color: var(--white);
       font-weight: 800;
     }
 
     .hero-card-quote p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .form-group {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .form-group label {
       display: block;
       font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--text-main);
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .form-control {
       width: 100%;
-      padding: 12px 15px;
-      background: rgba(7, 19, 41, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 14px 18px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-sm);
       color: var(--white);
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 1rem;
       transition: var(--transition);
     }
 
     .form-control:focus {
       outline: none;
       border-color: var(--cyan-accent);
-      box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+    }
+
+    .form-control option {
+      background: var(--bg-card);
+      color: var(--white);
     }
 
     /* ESTADÍSTICAS */
@@ -357,10 +376,15 @@
       background: var(--bg-card);
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 40px 0;
-      margin-top: -30px;
+      padding: 50px 0;
+      margin-top: -40px;
       position: relative;
       z-index: 10;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border-radius: var(--radius-md);
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .stats-grid {
@@ -371,24 +395,25 @@
     }
 
     .stat-number {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 900;
       color: var(--cyan-accent);
       line-height: 1;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 10px rgba(0, 210, 255, 0.3);
     }
 
     .stat-label {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
     }
 
     /* TÍTULOS */
     .section-padding {
-      padding: 90px 0;
+      padding: 100px 0;
     }
 
     .section-title-wrapper {
@@ -399,23 +424,23 @@
 
     .section-subtitle {
       color: var(--cyan-accent);
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
       display: block;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 800;
     }
 
-    /* SERVICIOS */
+    /* SERVICIOS - Fondos reemplazados con Unsplash */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
 
@@ -423,24 +448,25 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      border: 1px solid rgba(0, 210, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: var(--radius-md);
-      padding: 35px 25px;
+      padding: 40px 30px;
       transition: var(--transition);
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: var(--shadow);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    .service-card.s-estructuras { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('estructuras metalicas cuadrado.jpg'); background-size: cover; background-position: center; }
-    .service-card.s-carpinteria { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('carpinteria metalica.jpg'); background-size: cover; background-position: center; }
-    .service-card.s-inox { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('trabajo en inox.jpg'); background-size: cover; background-position: center; }
-    .service-card.s-montacargas { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('montacargas.jpg'); background-size: cover; background-position: center; }
-    .service-card.s-andamios { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('andamios.jpg'); background-size: cover; background-position: center; }
-    .service-card.s-ingenieria { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('ingeneria.jpg'); background-size: cover; background-position: center; }
-    .service-card.s-grua { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('gruia-telescopica-MANITEX2.jpg'); background-size: cover; background-position: center; }
+    /* Imágenes Unsplash Repetidas Estratégicamente */
+    .service-card.s-estructuras { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .service-card.s-carpinteria { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .service-card.s-inox { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .service-card.s-montacargas { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('https://images.unsplash.com/photo-1565008576549-57569a49371d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .service-card.s-andamios { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .service-card.s-ingenieria { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .service-card.s-grua { background: linear-gradient(135deg, rgba(8, 20, 42, 0.88), rgba(15, 38, 77, 0.92)), url('https://images.unsplash.com/photo-1565008576549-57569a49371d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
 
     .service-card::before {
       content: '';
@@ -460,9 +486,9 @@
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0, 210, 255, 0.35);
-      border-color: var(--cyan-accent);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 210, 255, 0.2);
+      border-color: rgba(0, 210, 255, 0.3);
     }
 
     .service-card:hover::before {
@@ -470,30 +496,37 @@
     }
 
     .service-icon {
-      width: 65px;
-      height: 65px;
-      background: rgba(0, 210, 255, 0.2);
-      border-radius: 12px;
+      width: 70px;
+      height: 70px;
+      background: rgba(0, 210, 255, 0.15);
+      border: 1px solid rgba(0, 210, 255, 0.3);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: var(--cyan-accent);
-      margin-bottom: 22px;
+      margin-bottom: 25px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--cyan-accent);
+      color: var(--primary-dark);
     }
 
     .service-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 12px;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 15px;
       color: var(--white);
     }
 
     .service-desc {
-      color: var(--text-main);
-      font-size: 0.95rem;
-      margin-bottom: 20px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 25px;
       flex-grow: 1;
       text-shadow: 0 1px 3px rgba(0,0,0,0.8);
     }
@@ -501,107 +534,124 @@
     .service-link {
       color: var(--cyan-accent);
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .service-link i {
+        transition: var(--transition);
+    }
+    
+    .service-card:hover .service-link i {
+        transform: translateX(5px);
     }
 
     /* SECCIÓN NOSOTROS */
     .about-main-grid {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
-      gap: 50px;
+      gap: 60px;
       align-items: center;
-      margin-bottom: 70px;
+      margin-bottom: 80px;
     }
 
     .about-image-wrapper {
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: var(--shadow);
-      min-height: 420px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      min-height: 450px;
     }
 
+    /* Imagen Unsplash nosotros */
     .about-image-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     .about-badge {
       position: absolute;
-      bottom: 25px;
-      right: 25px;
-      background: rgba(7, 19, 41, 0.9);
-      border: 1px solid var(--cyan-accent);
+      bottom: -1px;
+      right: -1px;
+      background: rgba(7, 19, 41, 0.95);
+      border-top: 2px solid var(--cyan-accent);
+      border-left: 2px solid var(--cyan-accent);
       backdrop-filter: blur(10px);
-      padding: 20px;
-      border-radius: var(--radius-md);
+      padding: 25px;
+      border-radius: 24px 0 0 0;
       display: flex;
       align-items: center;
       gap: 15px;
     }
 
     .about-badge-icon {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: var(--yellow-steel);
     }
 
     .mission-vision-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 25px;
-      margin-bottom: 30px;
+      gap: 25px;
+      margin-top: 35px;
+      margin-bottom: 40px;
     }
 
     .mv-card {
-      background: rgba(20, 40, 77, 0.6);
-      border: 1px solid rgba(0, 210, 255, 0.2);
-      padding: 22px;
-      border-radius: var(--radius-sm);
+      background: rgba(20, 40, 77, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: var(--radius-md);
       transition: var(--transition);
     }
 
     .mv-card:hover {
       border-color: var(--cyan-accent);
-      transform: translateY(-3px);
-      background: rgba(20, 40, 77, 0.9);
+      transform: translateY(-5px);
+      background: rgba(20, 40, 77, 0.8);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
     .mv-card h4 {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: var(--cyan-accent);
-      font-size: 1.1rem;
-      margin-bottom: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      font-weight: 800;
     }
 
     .mv-card p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
     }
 
     /* POR QUÉ ELEGIRNOS */
     .diff-section {
       background: linear-gradient(135deg, rgba(15, 38, 77, 0.4), rgba(7, 19, 41, 0.8));
-      border: 1px solid rgba(0, 210, 255, 0.2);
+      border: 1px solid rgba(0, 210, 255, 0.15);
       border-radius: var(--radius-lg);
-      padding: 60px 40px;
-      margin-top: 50px;
-      box-shadow: var(--shadow);
+      padding: 70px 50px;
+      margin-top: 60px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
 
     .diff-header {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
 
     .diff-header h3 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 800;
       color: var(--white);
       margin-bottom: 10px;
@@ -618,10 +668,10 @@
     }
 
     .diff-card {
-      background: rgba(11, 24, 46, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 24, 46, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: var(--radius-md);
-      padding: 30px;
+      padding: 35px;
       transition: var(--transition);
       position: relative;
       display: flex;
@@ -630,42 +680,43 @@
     }
 
     .diff-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--cyan-accent);
+      transform: translateY(-8px);
+      border-color: rgba(0, 210, 255, 0.3);
       background: rgba(18, 34, 63, 0.95);
-      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 210, 255, 0.15);
     }
 
     .diff-icon {
-      width: 55px;
-      height: 55px;
-      background: rgba(0, 210, 255, 0.15);
-      border-radius: 12px;
+      width: 60px;
+      height: 60px;
+      background: rgba(0, 210, 255, 0.1);
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: var(--cyan-accent);
       flex-shrink: 0;
     }
 
     .diff-content h4 {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: var(--white);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .diff-content p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .diff-footer-quote {
       text-align: center;
-      margin-top: 40px;
-      font-size: 1.25rem;
-      font-weight: 700;
+      margin-top: 50px;
+      font-size: 1.4rem;
+      font-weight: 800;
       font-style: italic;
       color: var(--cyan-accent);
       letter-spacing: 0.5px;
@@ -674,22 +725,22 @@
     /* VALORES */
     .values-section-title {
       text-align: center;
-      margin-bottom: 35px;
-      font-size: 1.8rem;
+      margin-bottom: 40px;
+      font-size: 2rem;
       font-weight: 800;
     }
 
     .values-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 25px;
     }
 
     .value-card {
-      background: rgba(15, 38, 77, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-sm);
-      padding: 25px 20px;
+      background: rgba(15, 38, 77, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      padding: 35px 20px;
       text-align: center;
       transition: var(--transition);
       position: relative;
@@ -702,17 +753,17 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 3px;
+      height: 4px;
       background: var(--cyan-accent);
       transform: scaleX(0);
       transition: var(--transition);
     }
 
     .value-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(0, 210, 255, 0.4);
-      background: rgba(20, 40, 77, 0.95);
-      box-shadow: var(--shadow);
+      transform: translateY(-8px);
+      border-color: rgba(0, 210, 255, 0.2);
+      background: rgba(20, 40, 77, 0.8);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     }
 
     .value-card:hover::after {
@@ -720,70 +771,73 @@
     }
 
     .value-icon {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: var(--cyan-accent);
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .value-card h5 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
       color: var(--white);
+      font-weight: 700;
     }
 
     .value-card p {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
     }
 
-    /* GALERÍA CORREGIDA Y SIN ESPACIOS VACÍOS */
+    /* GALERÍA - Imágenes Unsplash repetidas para rellenar */
     .portfolio-filters {
       display: flex;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 40px;
+      gap: 15px;
+      margin-bottom: 50px;
       flex-wrap: wrap;
     }
 
     .filter-btn {
-      background: var(--bg-card);
+      background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       color: var(--text-main);
-      padding: 10px 22px;
+      padding: 12px 28px;
       border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.9rem;
+      font-weight: 700;
+      font-size: 0.95rem;
       cursor: pointer;
       transition: var(--transition);
     }
 
     .filter-btn.active, .filter-btn:hover {
       background: var(--bright-blue);
-      border-color: var(--bright-blue);
+      border-color: var(--cyan-accent);
       color: var(--white);
+      box-shadow: 0 5px 15px rgba(0, 210, 255, 0.2);
     }
 
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
 
     .portfolio-item {
       position: relative;
       border-radius: var(--radius-md);
       overflow: hidden;
-      height: 280px;
+      height: 300px;
       cursor: pointer;
       background: var(--bg-card);
-      border: 1px solid rgba(0, 210, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
     .portfolio-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .portfolio-overlay {
@@ -792,17 +846,22 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to top, rgba(7, 19, 41, 0.95) 0%, rgba(7, 19, 41, 0.2) 100%);
+      background: linear-gradient(to top, rgba(7, 19, 41, 0.95) 0%, rgba(7, 19, 41, 0.1) 100%);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 25px;
+      padding: 30px;
       opacity: 0;
       transition: var(--transition);
     }
 
+    .portfolio-item:hover {
+      border-color: rgba(0, 210, 255, 0.4);
+      box-shadow: 0 15px 30px rgba(0, 210, 255, 0.2);
+    }
+
     .portfolio-item:hover img {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
 
     .portfolio-item:hover .portfolio-overlay {
@@ -811,16 +870,26 @@
 
     .portfolio-category {
       color: var(--cyan-accent);
-      font-size: 0.8rem;
-      font-weight: 700;
+      font-size: 0.85rem;
+      font-weight: 800;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      transform: translateY(15px);
+      transition: transform 0.4s ease;
     }
 
     .portfolio-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-top: 4px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-top: 8px;
       color: var(--white);
+      transform: translateY(15px);
+      transition: transform 0.4s ease 0.1s;
+    }
+    
+    .portfolio-item:hover .portfolio-category,
+    .portfolio-item:hover .portfolio-title {
+        transform: translateY(0);
     }
 
     .lightbox {
@@ -829,7 +898,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(5px);
       z-index: 2000;
       display: none;
       justify-content: center;
@@ -845,35 +915,49 @@
       max-width: 90%;
       max-height: 85vh;
       border-radius: var(--radius-sm);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .lightbox-close {
       position: absolute;
       top: 25px;
-      right: 30px;
+      right: 35px;
       color: var(--white);
-      font-size: 2.5rem;
+      font-size: 3rem;
       cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .lightbox-close:hover {
+        color: var(--cyan-accent);
+        transform: scale(1.1);
     }
 
     /* FAQ Y CONTACTO */
     .faq-wrapper {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
     }
 
     .faq-item {
-      background: var(--bg-card);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-sm);
-      margin-bottom: 15px;
+      border-radius: var(--radius-md);
+      margin-bottom: 20px;
       overflow: hidden;
+      transition: var(--transition);
+    }
+    
+    .faq-item:hover {
+        border-color: rgba(0, 210, 255, 0.2);
+        background: rgba(255, 255, 255, 0.04);
     }
 
     .faq-question {
-      padding: 20px 25px;
+      padding: 25px 30px;
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -884,20 +968,22 @@
     .faq-question i {
       transition: var(--transition);
       color: var(--cyan-accent);
+      font-size: 1.2rem;
     }
 
     .faq-answer {
-      padding: 0 25px;
+      padding: 0 30px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
+      transition: max-height 0.4s ease, padding 0.4s ease;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     .faq-item.active .faq-answer {
-      padding: 0 25px 20px;
-      max-height: 200px;
+      padding: 0 30px 25px;
+      max-height: 300px;
     }
 
     .faq-item.active .faq-question i {
@@ -912,48 +998,56 @@
 
     .contact-info-card {
       background: var(--bg-card);
-      padding: 35px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 45px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
     }
 
     .contact-item {
       display: flex;
       align-items: flex-start;
-      gap: 18px;
-      margin-bottom: 28px;
+      gap: 20px;
+      margin-bottom: 35px;
     }
 
     .contact-icon {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       background: rgba(27, 99, 198, 0.2);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--cyan-accent);
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .contact-item:hover .contact-icon {
+        transform: scale(1.1);
     }
 
     .contact-icon.whatsapp { background: rgba(37, 211, 102, 0.15); color: #25d366; }
     .contact-icon.tiktok { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
     .contact-icon.facebook { background: rgba(24, 119, 242, 0.2); color: #1877f2; }
 
-    .contact-details h4 { font-size: 1.05rem; margin-bottom: 4px; }
-    .contact-details p, .contact-details a { color: var(--text-muted); font-size: 0.95rem; }
-    .contact-details a:hover { color: var(--cyan-accent); }
+    .contact-details h4 { font-size: 1.1rem; margin-bottom: 6px; font-weight: 700; color: var(--white); }
+    .contact-details p, .contact-details a { color: var(--text-muted); font-size: 1rem; }
+    .contact-details a:hover { color: var(--cyan-accent); text-decoration: underline; }
 
     .social-links {
       display: flex;
-      gap: 12px;
-      margin-top: 30px;
+      gap: 15px;
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
 
     .social-btn {
-      width: 44px;
-      height: 44px;
+      width: 50px;
+      height: 50px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 50%;
@@ -961,81 +1055,86 @@
       align-items: center;
       justify-content: center;
       color: var(--text-main);
+      font-size: 1.2rem;
       transition: var(--transition);
     }
 
     .social-btn:hover {
       background: var(--bright-blue);
+      border-color: var(--cyan-accent);
       color: var(--white);
-      transform: translateY(-3px);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
     }
 
     /* BOTONES FLOTANTES */
     .floating-social-container {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
+      bottom: 30px;
+      right: 30px;
       z-index: 999;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 15px;
       align-items: center;
     }
 
     .float-btn {
-      width: 52px;
-      height: 52px;
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 24px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
       transition: var(--transition);
     }
 
-    .float-btn:hover { transform: scale(1.1); }
-    .float-whatsapp { background-color: #25d366; width: 62px; height: 62px; font-size: 32px; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); animation: pulse 2s infinite; }
+    .float-btn:hover { transform: scale(1.15); }
+    .float-whatsapp { background-color: #25d366; width: 65px; height: 65px; font-size: 32px; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); animation: pulse 2s infinite; }
     .float-tiktok { background-color: #000000; border: 1px solid rgba(255, 255, 255, 0.2); }
     .float-facebook { background-color: #1877f2; }
 
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
     /* FOOTER */
     footer {
-      background: #040c1a;
+      background: #020813;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 60px 0 30px;
-      font-size: 0.9rem;
+      padding: 80px 0 30px;
+      font-size: 0.95rem;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 50px;
+      gap: 50px;
+      margin-bottom: 60px;
     }
 
-    .footer-col p { color: var(--text-muted); margin-top: 15px; max-width: 350px; }
-    .footer-col h4 { font-size: 1.1rem; margin-bottom: 20px; color: var(--white); }
+    .footer-col p { color: var(--text-muted); margin-top: 20px; max-width: 400px; line-height: 1.8; }
+    .footer-col h4 { font-size: 1.2rem; margin-bottom: 25px; color: var(--white); font-weight: 800; }
     .footer-links { list-style: none; }
-    .footer-links li { margin-bottom: 10px; }
-    .footer-links a { color: var(--text-muted); transition: var(--transition); }
-    .footer-links a:hover { color: var(--cyan-accent); padding-left: 5px; }
-    .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 25px; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: var(--text-muted); transition: var(--transition); display: inline-block; }
+    .footer-links a:hover { color: var(--cyan-accent); transform: translateX(5px); }
+    .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
 
     @media (max-width: 992px) {
-      .hero-grid, .about-main-grid, .contact-grid, .footer-grid, .mission-vision-grid { grid-template-columns: 1fr; gap: 40px; }
-      .diff-section { padding: 40px 20px; }
+      .hero-grid, .about-main-grid, .contact-grid, .footer-grid, .mission-vision-grid { grid-template-columns: 1fr; gap: 50px; }
+      .diff-section { padding: 50px 30px; }
+      .nav-menu { gap: 15px; }
     }
 
     @media (max-width: 768px) {
       .mobile-toggle { display: block; }
+      .btn-contact-header { display: none; } /* Ocultar botón en móvil para dejar solo hamburguesa */
       .nav-menu {
         position: fixed;
         top: 80px;
@@ -1045,18 +1144,18 @@
         background: rgba(7, 19, 41, 0.98);
         backdrop-filter: blur(15px);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 60px;
         gap: 30px;
         transition: var(--transition);
-        padding: 40px 20px;
       }
       .nav-menu.active { left: 0; }
-      .nav-link { font-size: 1.2rem; }
-      .section-padding { padding: 60px 0; }
-      .hero { padding-top: 110px; padding-bottom: 50px; }
-      .floating-social-container { bottom: 15px; right: 15px; }
-      .float-whatsapp { width: 55px; height: 55px; font-size: 28px; }
-      .float-btn { width: 45px; height: 45px; font-size: 20px; }
+      .nav-link { font-size: 1.4rem; }
+      .section-padding { padding: 70px 0; }
+      .hero { padding-top: 120px; padding-bottom: 60px; }
+      .floating-social-container { bottom: 20px; right: 20px; }
+      .float-whatsapp { width: 60px; height: 60px; font-size: 30px; }
+      .float-btn { width: 50px; height: 50px; font-size: 22px; }
     }
   </style>
 </head>
@@ -1065,7 +1164,7 @@
   <header>
     <div class="container nav-container">
       <a href="#" class="logo">
-        <img src="logo 1.jpg" alt="Logo OBH Metales" class="logo-img">
+        <div class="logo-icon-fallback"><i class="fas fa-cubes"></i></div>
         <div class="logo-text">OBH METALES<span>METALES SAC</span></div>
       </a>
 
@@ -1106,9 +1205,9 @@
         </div>
       </div>
 
-      <!-- COTIZADOR EXPRESS CON LOGOTIPO EN BANNER HORIZONTAL -->
       <div class="hero-card-quote">
-        <img src="logo 1.jpg" alt="OBH Metales SAC Logo Banner" class="hero-logo-banner">
+        <!-- Banner formulario cambiado a Unsplash -->
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Detalle soldadura" class="hero-logo-banner">
         <h3>Cotizador Express</h3>
         <p>Selecciona tu servicio y recibe atención prioritaria:</p>
         
@@ -1135,7 +1234,7 @@
             <input type="tel" id="quotePhone" class="form-control" placeholder="Ej. 901538435" required>
           </div>
 
-          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 5px;">
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px; font-size: 1.1rem; padding: 16px;">
             <i class="fas fa-paper-plane"></i> Solicitar Presupuesto
           </button>
         </form>
@@ -1177,49 +1276,49 @@
           <div class="service-icon"><i class="fas fa-building"></i></div>
           <h3 class="service-title">Estructuras Metálicas</h3>
           <p class="service-desc">Fabricación y montaje de naves industriales, techos parabólicos, tijerales y coberturas ligeras o pesadas.</p>
-          <a href="#contacto" class="service-link">Consultar <i class="fas fa-chevron-right"></i></a>
+          <a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card s-carpinteria">
           <div class="service-icon"><i class="fas fa-tools"></i></div>
           <h3 class="service-title">Carpintería Metálica</h3>
           <p class="service-desc">Diseño y fabricación de puertas industriales, portones apanados, barandas, escaleras de emergencia y rejas.</p>
-          <a href="#contacto" class="service-link">Consultar <i class="fas fa-chevron-right"></i></a>
+          <a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card s-inox">
           <div class="service-icon"><i class="fas fa-rocket"></i></div>
           <h3 class="service-title">Trabajos en Inox</h3>
           <p class="service-desc">Mecanizado y soldadura TIG/MIG en acero inoxidable para sectores alimentarios, médicos e industriales.</p>
-          <a href="#contacto" class="service-link">Consultar <i class="fas fa-chevron-right"></i></a>
+          <a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card s-montacargas">
           <div class="service-icon"><i class="fas fa-truck-loading"></i></div>
           <h3 class="service-title">Servicio de Montacargas</h3>
           <p class="service-desc">Alquiler y maniobras con equipos de elevación y montacargas de alta capacidad con operadores certificados.</p>
-          <a href="#contacto" class="service-link">Consultar <i class="fas fa-chevron-right"></i></a>
+          <a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card s-andamios">
           <div class="service-icon"><i class="fas fa-cubes"></i></div>
           <h3 class="service-title">Alquiler y Venta de Andamios</h3>
           <p class="service-desc">Andamios normados para trabajos en altura, multidireccionales con altos estándares de seguridad.</p>
-          <a href="#contacto" class="service-link">Consultar <i class="fas fa-chevron-right"></i></a>
+          <a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card s-ingenieria">
           <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
           <h3 class="service-title">Ingeniería y Proyectos</h3>
           <p class="service-desc">Asesoría técnica integral, desarrollo de planos, memorias descriptivas y supervisión de obras.</p>
-          <a href="#contacto" class="service-link">Consultar <i class="fas fa-chevron-right"></i></a>
+          <a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="service-card s-grua">
           <div class="service-icon"><i class="fas fa-truck-moving"></i></div>
           <h3 class="service-title">Camión Grúa Telescópica</h3>
           <p class="service-desc">Alquiler de camiones grúa telescópica para maniobras, izaje y traslado de cargas pesadas.</p>
-          <a href="#contacto" class="service-link">Consultar <i class="fas fa-chevron-right"></i></a>
+          <a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -1230,12 +1329,13 @@
     <div class="container">
       <div class="about-main-grid">
         <div class="about-image-wrapper">
-          <img src="e5adb09d-9382-4509-b818-8d6954eb22b3.jpg" alt="Especialistas de OBH Metales SAC">
+          <!-- Imagen Unsplash equipo -->
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Especialistas en la industria">
           <div class="about-badge">
             <i class="fas fa-award about-badge-icon"></i>
             <div>
-              <strong style="display:block; font-size: 1.1rem; color:var(--white)">Empresa Garantizada</strong>
-              <span style="font-size:0.85rem; color:var(--text-muted)">Cumplimos con normas ISO y NTP</span>
+              <strong style="display:block; font-size: 1.15rem; color:var(--white)">Empresa Garantizada</strong>
+              <span style="font-size:0.9rem; color:var(--text-muted)">Cumplimos con normas ISO y NTP</span>
             </div>
           </div>
         </div>
@@ -1243,7 +1343,7 @@
         <div>
           <span class="section-subtitle">Sobre OBH Metales SAC</span>
           <h2 class="section-title">Los Mejores Especialistas en Estructuras</h2>
-          <p style="color:var(--text-muted); margin-top: 15px;">
+          <p style="color:var(--text-muted); margin-top: 20px; font-size: 1.05rem;">
             En <strong>OBH Metales SAC</strong> ofrecemos soluciones integrales en ingeniería, fabricación y montaje de estructuras de metal con resistencia y máxima seguridad.
           </p>
 
@@ -1258,7 +1358,7 @@
             </div>
           </div>
 
-          <a href="https://wa.me/51901538435?text=Deseo%20más%20información" class="btn-primary" target="_blank">
+          <a href="https://wa.me/51901538435?text=Deseo%20más%20información" class="btn-primary" target="_blank" style="padding: 16px 35px; font-size: 1.1rem;">
             <i class="fas fa-comments"></i> Hablar con un Asesor
           </a>
         </div>
@@ -1307,7 +1407,7 @@
           <div class="diff-card">
             <div class="diff-icon"><i class="fas fa-shield-alt"></i></div>
             <div class="diff-content">
-              <h4>Compromiso con la Seguridad y Calidad</h4>
+              <h4>Compromiso y Calidad</h4>
               <p>Priorizamos la seguridad y el estricto control de calidad durante las diferentes etapas del proyecto.</p>
             </div>
           </div>
@@ -1327,7 +1427,7 @@
       </div>
 
       <!-- VALORES -->
-      <div style="margin-top: 70px;">
+      <div style="margin-top: 80px;">
         <h3 class="values-section-title">Nuestros Valores Corporativos</h3>
         <div class="values-grid">
           <div class="value-card">
@@ -1360,7 +1460,7 @@
     </div>
   </section>
 
-  <!-- GALERÍA DE PROYECTOS (SIN ESPACIOS VACÍOS) -->
+  <!-- GALERÍA DE PROYECTOS (Repitiendo 4 URLs seguras de Unsplash) -->
   <section id="proyectos" class="section-padding">
     <div class="container">
       <div class="section-title-wrapper">
@@ -1377,7 +1477,7 @@
 
       <div class="portfolio-grid">
         <div class="portfolio-item" data-category="estructuras">
-          <img src="be0081ff-7d60-4d68-a379-0396ee2934b6.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Montaje Estructura">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Estructuras Metálicas</span>
             <h4 class="portfolio-title">Montaje de Estructura Industrial</h4>
@@ -1385,7 +1485,7 @@
         </div>
 
         <div class="portfolio-item" data-category="taller">
-          <img src="a54bac98-df5f-4073-b0a8-5e6e00ffcce2.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trabajos Taller">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Taller y Soldadura</span>
             <h4 class="portfolio-title">Trabajos Especializados en Acero</h4>
@@ -1393,7 +1493,7 @@
         </div>
 
         <div class="portfolio-item" data-category="estructuras">
-          <img src="c030d4ac-6e77-43bf-b2ff-4b2e14e133fe.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instalación">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Estructuras Metálicas</span>
             <h4 class="portfolio-title">Instalación y Coberturas</h4>
@@ -1401,7 +1501,7 @@
         </div>
 
         <div class="portfolio-item" data-category="taller">
-          <img src="d13b0d3e-a960-4609-8a5b-6110e66c3015.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Soldadura">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Taller y Soldadura</span>
             <h4 class="portfolio-title">Proceso de Soldadura Avanzada</h4>
@@ -1409,7 +1509,7 @@
         </div>
 
         <div class="portfolio-item" data-category="estructuras">
-          <img src="ef66c6c3-d8ae-4238-8ec4-cd8cde4922d6.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Montaje">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Estructuras Metálicas</span>
             <h4 class="portfolio-title">Montaje Estructural en Obra</h4>
@@ -1417,7 +1517,7 @@
         </div>
 
         <div class="portfolio-item" data-category="ingenieria">
-          <img src="a8018637-9e7f-4ff4-81d5-8448b0442429.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Diseño">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Ingeniería</span>
             <h4 class="portfolio-title">Diseño Técnico y Metálico</h4>
@@ -1425,7 +1525,7 @@
         </div>
 
         <div class="portfolio-item" data-category="taller">
-          <img src="a48e0a1a-0b09-46fb-856d-e611cff6b88e.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fabricación">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Taller y Soldadura</span>
             <h4 class="portfolio-title">Fabricación de Componentes</h4>
@@ -1433,7 +1533,7 @@
         </div>
 
         <div class="portfolio-item" data-category="estructuras">
-          <img src="38858340-e42b-45f3-aa8c-2f27259733fc.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Estructuras Pesadas">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Estructuras Metálicas</span>
             <h4 class="portfolio-title">Estructuras Pesadas Industriales</h4>
@@ -1441,92 +1541,13 @@
         </div>
 
         <div class="portfolio-item" data-category="ingenieria">
-          <img src="457158bd-83db-4205-bd6f-8303389db4f3.jpg" alt="Proyecto">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Supervisión">
           <div class="portfolio-overlay">
             <span class="portfolio-category">Ingeniería</span>
             <h4 class="portfolio-title">Supervisión y Estándares</h4>
           </div>
         </div>
 
-        <div class="portfolio-item" data-category="taller">
-          <img src="350a3af7-c9fc-4394-a96d-ab5646e50c68.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Taller y Soldadura</span>
-            <h4 class="portfolio-title">Acabados Metálicos de Precisión</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="estructuras">
-          <img src="53ed9047-b324-4ea7-9dd6-071250534007.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Estructuras Metálicas</span>
-            <h4 class="portfolio-title">Desarrollo de Coberturas</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="ingenieria">
-          <img src="ea86da0c-5293-4afa-b33e-8b9308ec937d.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Ingeniería</span>
-            <h4 class="portfolio-title">Planificación y Logística</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="taller">
-          <img src="a65b2563-b611-44ca-9e2d-db15c7e69502.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Taller y Soldadura</span>
-            <h4 class="portfolio-title">Armado de Estructuras en Planta</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="estructuras">
-          <img src="c4c7d563-4587-4895-888f-3114b29437f3.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Estructuras Metálicas</span>
-            <h4 class="portfolio-title">Soluciones para la Industria</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="ingenieria">
-          <img src="3ca5042e-aa4f-4bfc-8781-23e081669518.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Ingeniería</span>
-            <h4 class="portfolio-title">Evaluación Técnica y de Cargas</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="taller">
-          <img src="00fd2fff-5065-46aa-916f-e196a31a7e56.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Taller y Soldadura</span>
-            <h4 class="portfolio-title">Soldadura Certificada MIG/TIG</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="estructuras">
-          <img src="0538bfb0-5967-41ad-b98e-c0649fe516d8.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Estructuras Metálicas</span>
-            <h4 class="portfolio-title">Montaje y Maniobras de Izaje</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="taller">
-          <img src="9fab36c6-0ac6-4e69-b065-7daaab1bbe2b.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Taller y Soldadura</span>
-            <h4 class="portfolio-title">Fabricación y Estándares</h4>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="ingenieria">
-          <img src="30cfc038-155d-43d7-9532-efa2b3ead9fe.jpg" alt="Proyecto">
-          <div class="portfolio-overlay">
-            <span class="portfolio-category">Ingeniería</span>
-            <h4 class="portfolio-title">Coordinación de Proyectos</h4>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -1546,22 +1567,22 @@
       <div class="faq-wrapper">
         <div class="faq-item">
           <div class="faq-question">¿Realizan trabajos a nivel nacional?<i class="fas fa-chevron-down"></i></div>
-          <div class="faq-answer">Sí, en OBH Metales SAC contamos con capacidad logística para trasladar equipos, materiales y técnicos a cualquier región del país.</div>
+          <div class="faq-answer"><br>Sí, en OBH Metales SAC contamos con capacidad logística para trasladar equipos, materiales y técnicos a cualquier región del país garantizando los mismos estándares.</div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">¿Emiten factura y comprobante legal?<i class="fas fa-chevron-down"></i></div>
-          <div class="faq-answer">Totalmente. Somos una Sociedad Anónima Cerrada (S.A.C.) debidamente registrada con RUC y garantías de ley.</div>
+          <div class="faq-answer"><br>Totalmente. Somos una Sociedad Anónima Cerrada (S.A.C.) debidamente registrada con RUC y entregamos todas las garantías de ley en facturación.</div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">¿Cómo solicito una cotización formal?<i class="fas fa-chevron-down"></i></div>
-          <div class="faq-answer">Puedes comunicarte al teléfono/WhatsApp <strong>901 538 435</strong> o utilizar el formulario de la página web.</div>
+          <div class="faq-answer"><br>Puedes comunicarte al teléfono/WhatsApp <strong>901 538 435</strong> o utilizar el formulario de la página web. Responderemos con una propuesta formal.</div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">¿Ofrecen garantía sobre las estructuras instaladas?<i class="fas fa-chevron-down"></i></div>
-          <div class="faq-answer">Todas nuestras obras cuentan con garantía estructural por escrito y certificado de calidad.</div>
+          <div class="faq-answer"><br>Todas nuestras obras cuentan con garantía estructural por escrito, certificaciones de calidad y el aval de nuestros ingenieros colegiados.</div>
         </div>
       </div>
     </div>
@@ -1576,7 +1597,7 @@
 
       <div class="contact-grid">
         <div class="contact-info-card">
-          <h3 style="margin-bottom: 25px; font-size: 1.4rem;">Información Corporativa</h3>
+          <h3 style="margin-bottom: 30px; font-size: 1.6rem; color: var(--white);">Información Corporativa</h3>
           
           <div class="contact-item">
             <div class="contact-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
@@ -1618,7 +1639,7 @@
         </div>
 
         <div class="contact-info-card">
-          <h3 style="margin-bottom: 20px; font-size: 1.4rem;">Envíanos un Mensaje</h3>
+          <h3 style="margin-bottom: 30px; font-size: 1.6rem; color: var(--white);">Envíanos un Mensaje</h3>
           <form id="contactForm">
             <div class="form-group">
               <label for="contactName">Nombre Completo</label>
@@ -1630,9 +1651,9 @@
             </div>
             <div class="form-group">
               <label for="contactMessage">Detalles del Proyecto</label>
-              <textarea id="contactMessage" class="form-control" rows="4" placeholder="Escribe las medidas, tipo de estructura o trabajo requerido..." required></textarea>
+              <textarea id="contactMessage" class="form-control" rows="5" placeholder="Escribe las medidas, tipo de estructura o trabajo requerido..." required></textarea>
             </div>
-            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 18px;">
               <i class="fab fa-whatsapp"></i> Enviar Mensaje por WhatsApp
             </button>
           </form>
@@ -1646,10 +1667,10 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="logo">
-            <img src="logo 1.jpg" alt="Logo OBH Metales" class="logo-img" style="height: 32px;">
+            <div class="logo-icon-fallback" style="font-size: 1.5rem; padding: 5px;"><i class="fas fa-cubes"></i></div>
             <div class="logo-text">OBH METALES SAC</div>
           </div>
-          <p>Especialistas en ingeniería, fabricación y montaje de estructuras de metal, carpintería metálica, acero inoxidable y servicios auxiliares.</p>
+          <p>Especialistas en ingeniería, fabricación y montaje de estructuras de metal, carpintería metálica, acero inoxidable y servicios auxiliares a nivel nacional.</p>
         </div>
 
         <div class="footer-col">
@@ -1709,6 +1730,16 @@
     });
 
     document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    /* Manejo del Header al hacer scroll para darle fondo oscuro */
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(7, 19, 41, 0.95)';
+      } else {
+        header.style.background = 'rgba(7, 19, 41, 0.75)';
+      }
+    });
 
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
